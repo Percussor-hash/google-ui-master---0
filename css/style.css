@@ -1,191 +1,277 @@
-/* Your existing CSS remains unchanged until the media queries */
-
-/* Tablet View - Add this new media query */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    /* Navigation for Tablet */
-    nav {
-        margin: 12px 20px;
-    }
-    
-    /* Search Box for Tablet */
-    .s-box {
-        width: 75%;
-        max-width: 580px;
-    }
-    
-    /* Search Buttons for Tablet - more space than mobile but less than desktop */
-    .s-btn {
-        margin: 20px 8px;
-        padding: 9px 13px;
-    }
-    
-    /* Advanced Search adjustments for Tablet */
-    .input-one {
-        margin: 30px 20px;
-    }
-    
-    .input-one .text-des-heading {
-        min-width: 150px;
-        width: 20%;
-    }
-    
-    .input-one .input-field {
-        width: 45%;
-    }
-    
-    .input-one .to-do {
-        width: 25%;
-    }
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: arial, sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 30px;
+	margin-top: 14px;
+	margin-bottom: 20px;
+	
+}
+nav a {
+	font-size: 13px;
+	display: inline-block;
+	line-height: 24px;
+	font-weight: 400;
+	color: #000000;
+	cursor: pointer;
+	padding: 5px 6.7px
+}
+nav a:hover {
+	text-decoration: underline;
+	opacity: .85;
+}
+nav img {
+	width: 34px;
+	padding: 5px;
+	margin: auto 7px;
+	cursor: pointer;
+}
+nav img:hover {
+	opacity: .8;
+}
+nav button {
+	border: 1px solid #4285f4;
+	font-weight: bold;
+	outline: none;
+	background: #4285f4;
+	color: #fff;
+	padding: 7px 12px;
+	border-radius: 3px;
+	margin-left: 7px;
+	cursor: pointer;
+}
+.section-1 {
+	flex: 1;
+}
+.section-1 .logo {
+	display: block;
+	margin: 0px auto;
+	margin-top: 15px;
+}
+.s-box {
+	width: 580px;
+	margin: 0px auto;
+	position: relative;
+	margin-top: -8px;
+	text-align: center;
+}
+.s-box .s-input {
+	display: block;
+	border: 1px solid #ddd;
+	color: rgba(0,0,0, 0.87);
+	font-size: 16px;
+	padding: 13px;
+	padding-left: 45px;
+	border-radius: 25px;
+	width: 100%;
+	transition: box-shadow 100ms;
+	outline: none;
+}
+.s-box  .s-input:hover {
+	border: 1px solid #fff;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 
+				0 0 2px rgba(0, 0, 0, 0.05),
+				0 0 3px rgba(0, 0, 0, 0.05),
+				0 0 4px rgba(0, 0, 0, 0.05), 
+				0 0 5px rgba(0, 0, 0, 0.05), 
+				0 0 4px rgba(0, 0, 0, 0.05), 
+				0 0 5px rgba(0, 0, 0, 0.05)
+}
+.s-box .search-icon {
+	width: 20px;
+	opacity: .4;
+	position: absolute;
+	top: 13px;
+	left: 14px;
+}
+.s-box .vs-icon {
+	width: 14px;
+	position: absolute;
+	top: 13px;
+	right: 24px;
+}
+.s-btn {
+	border: 1px solid transparent;
+	padding: 9px 15px;
+	color: #666;
+	font-size: 14px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 28px;
+	outline: none;
+	cursor: pointer;
+	transition: border-color 100ms;
+}
+.s-btn:hover {
+	border: 1px solid #aaa;
+}
+.lang {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 13px;
+	color: #111;
+}
+.lang a {
+	margin-left: 5px;
+	color: #1a0dab;
+}
+.lang a:hover {
+	text-decoration: underline;
+}
+footer {
+	background: #f2f2f2;
+}
+footer h4 {
+	color: #000000;
+	font-size: 15px;
+	line-height: 39.5px;
+	font-weight: 400;
+	padding-left: 29px;
+	border: 1px solid #eee;
+}
+footer a {
+	color: #000000;
+	display: inline-block;
+	padding: 12px 11.3px;
+	font-size: 14px;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+.links {
+	border-top: 1px solid #ddd;
+	display: flex;
+}
+.link-1 {
+	padding-left: 18.7px;
+	flex: 1;
+}
+.link-2 {
+	padding-right: 18.7px;
 }
 
-/* Improved Mobile View - Enhance your existing media query */
-@media screen and (max-width: 768px) {
-    /* Navigation for Mobile */
-    nav {
-        justify-content: space-between;
-        margin: 10px 15px;
-        flex-wrap: wrap;
-    }
-    
-    nav button {
-        margin-top: 5px;
-    }
-    
-    /* Logo for Mobile */
-    .section-1 .logo {
-        margin-top: 10px;
-        max-width: 80%;
-        height: auto;
-    }
-    
-    /* Search Box for Mobile */
-    .s-box {
-        width: 90%;
-        max-width: 580px;
-        margin-top: 5px;
-    }
-    
-    .s-box .s-input {
-        padding: 10px;
-        padding-left: 40px;
-        font-size: 15px;
-    }
-    
-    /* Search Buttons for Mobile */
-    .s-btn {
-        margin: 15px 5px;
-        padding: 8px 12px;
-    }
-    
-    /* Footer Links for Mobile */
-    .links {
-        flex-direction: column;
-    }
-    
-    .link-1, .link-2 {
-        text-align: center;
-        padding: 5px 0;
-    }
+#g-img{
+	width: 310px;
+	height: 110px;
+	margin:auto;
 }
 
-/* Small Mobile Devices - Enhance your existing 480px media query */
-@media screen and (max-width: 480px) {
-    /* Improved adjustments for smaller phones */
-    nav {
-        margin: 8px 10px;
-    }
-    
-    nav a {
-        font-size: 12px;
-        padding: 4px 5px;
-    }
-    
-    nav img {
-        width: 28px;
-        margin: auto 5px;
-    }
-    
-    nav button {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-    
-    .s-box {
-        width: 85%;
-    }
-    
-    .s-box .s-input {
-        padding: 8px;
-        padding-left: 35px;
-        font-size: 14px;
-    }
-    
-    /* Fix search icons positioning on very small screens */
-    .s-box .search-icon {
-        width: 16px;
-        top: 10px;
-        left: 10px;
-    }
-    
-    .s-box .vs-icon {
-        width: 12px;
-        top: 10px;
-        right: 20px;
-    }
-    
-    /* Make buttons stack on very small screens */
-    .s-btn {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        text-align: center;
-    }
-    
-    /* Language options on small mobile */
-    .lang {
-        font-size: 12px;
-        margin-top: 20px;
-    }
-    
-    /* Advanced Search adjustments for small mobile */
-    .advanced_subheader h3 {
-        font-size: 18px;
-        margin-left: 20px;
-    }
-    
-    .input-one {
-        margin: 15px 10px;
-    }
-    
-    .input-one .button input {
-        min-width: 100px;
-    }
+.googletiny img{
+	width: 74px;
+	height: 24px;
 }
 
-/* Extra small devices - Add this for very small screens */
-@media screen and (max-width: 320px) {
-    .s-box {
-        width: 90%;
-    }
-    
-    .s-box .s-input {
-        padding: 7px;
-        padding-left: 30px;
-        font-size: 13px;
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    
-    nav a, nav button {
-        margin: 3px 0;
-    }
-    
-    .s-btn {
-        width: 90%;
-        padding: 7px;
-        font-size: 12px;
-    }
+.advanced_subheader{
+	border-bottom: 1px solid #ebebeb;
+}
+
+.advanced_subheader h3{
+	color: #d93025;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-left: 35px;
+	margin-top: 15px;
+	font-weight: normal;
+}
+
+.input-one .text-des-heading{
+	font-size: 16px;
+	min-width: 167px;
+	width: 16%;
+	font-weight: 500;
+	color: #333333;
+}
+
+.input-one{
+	display: flex;
+	align-items: center;
+	max-width: 1140px;
+	min-width: 200px;
+	width: 96%;
+	margin: 40px 2% 0 45px;
+}
+
+.input-one .text-des{
+	width: 200px;
+	font-size: 13px;
+}
+
+.input-one .input-field{
+	min-width: 167px;
+	width: 50%;
+}
+
+.input-one .input-field input{
+	border-radius: 1px;
+	border: 1px solid #d9d9d9;
+	font-size: 13px;
+	height: 25px;
+	padding: 1px 8px;
+	width: 100%;
+}
+
+.input-one .to-do{
+	width: 32%;
+	min-width: 16px;
+	color: #555555;
+	font-size: 11px;
+	padding-left: 30px;
+}
+
+span{
+	color: #666666;
+	font-family: monospace;
+	font-size: 11px;
+	white-space: pre;
+}
+
+.input-one .button{
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 50px;
+}
+
+.button input{
+	background-color: #4d90fe;
+	background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+	color: #ffffff;
+	height: 30px;
+	min-width: 120px;
+	border: 1px solid #3079ed;
+	border-radius: 2px;
+	font-size: 11px;
+	font-weight: bold;
+} 
+
+.tinygoogle img{
+	width: 74px;
+	height: 24px;
+    margin-right: 900px;
+    padding-top: 0px;
+    margin-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+	
+}
+
+.to-do-heading {
+	margin-left: 13px;
+    color: #777777;
+    font-weight: 700;
+    font-size: small;
 }
