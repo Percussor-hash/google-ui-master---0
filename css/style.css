@@ -266,7 +266,6 @@ span{
     padding-bottom: 0px;
     padding-right: 0px;
     padding-left: 0px;
-	
 }
 
 .to-do-heading {
@@ -274,4 +273,121 @@ span{
     color: #777777;
     font-weight: 700;
     font-size: small;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a, nav button {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+nav img {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Google Logo */
+.logo {
+    width: 40%;
+    max-width: 300px;
+}
+
+/* Search Box */
+.s-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.s-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+}
+
+/* Search Buttons */
+.s-btn {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+.s-btn:hover {
+    background: #e8e8e8;
+}
+
+/* Footer */
+footer {
+    background: #f1f1f1;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    nav img {
+        display: none;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    button {
+        margin-left: auto;
+    }
+
+    .s-box {
+        flex-direction: column;
+    }
+
+    .s-input {
+        width: 90%;
+    }
+
+    footer .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .link-1, footer .link-2 {
+        text-align: center;
+    }
 }
