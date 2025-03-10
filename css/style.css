@@ -12,12 +12,14 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation Bar */
+/* Navigation Bar - Desktop Style */
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 10px 20px;
+    margin-right: 30px;
+    margin-top: 14px;
+    margin-bottom: 20px;
 }
 
 nav a {
@@ -58,29 +60,25 @@ nav button {
     cursor: pointer;
 }
 
-/* Main Content */
+/* Main Content Section */
 .section-1 {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .section-1 .logo {
-    max-width: 272px;
-    width: 100%;
+    display: block;
+    margin: 0px auto;
+    margin-top: 15px;
+    width: auto;
     height: auto;
-    margin-bottom: 20px;
 }
 
-/* Search Box */
+/* Search Box - Desktop Style */
 .s-box {
-    width: 90%;
-    max-width: 580px;
-    margin: 0 auto;
+    width: 580px;
+    margin: 0px auto;
     position: relative;
+    margin-top: -8px;
     text-align: center;
 }
 
@@ -97,30 +95,33 @@ nav button {
     outline: none;
 }
 
-.s-box .s-input:hover,
-.s-box .s-input:focus {
+.s-box .s-input:hover {
     border: 1px solid #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 
+                0 0 2px rgba(0, 0, 0, 0.05),
+                0 0 3px rgba(0, 0, 0, 0.05),
+                0 0 4px rgba(0, 0, 0, 0.05), 
+                0 0 5px rgba(0, 0, 0, 0.05), 
+                0 0 4px rgba(0, 0, 0, 0.05), 
+                0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .s-box .search-icon {
     width: 20px;
     opacity: .4;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13px;
     left: 14px;
 }
 
 .s-box .vs-icon {
     width: 14px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13px;
     right: 24px;
 }
 
-/* Search Buttons */
+/* Search Buttons - Desktop Style */
 .s-btn {
     border: 1px solid transparent;
     padding: 9px 15px;
@@ -128,16 +129,17 @@ nav button {
     font-size: 14px;
     border-radius: 4px;
     display: inline-block;
-    margin: 15px 5px;
+    margin-right: 10px;
+    margin-top: 28px;
     outline: none;
     cursor: pointer;
     transition: border-color 100ms;
-    background-color: #f8f9fa;
+    background: #f8f9fa;
 }
 
 .s-btn:hover {
     border: 1px solid #aaa;
-    background-color: #f1f1f1;
+    background: #f8f9fa;
 }
 
 /* Language Options */
@@ -146,8 +148,6 @@ nav button {
     text-align: center;
     font-size: 13px;
     color: #111;
-    width: 100%;
-    padding: 0 10px;
 }
 
 .lang a {
@@ -162,7 +162,6 @@ nav button {
 /* Footer */
 footer {
     background: #f2f2f2;
-    width: 100%;
     margin-top: auto;
 }
 
@@ -189,7 +188,6 @@ footer a:hover {
 .links {
     border-top: 1px solid #ddd;
     display: flex;
-    padding: 10px 0;
 }
 
 .link-1 {
@@ -199,10 +197,20 @@ footer a:hover {
 
 .link-2 {
     padding-right: 18.7px;
-    text-align: right;
 }
 
-/* Advanced Search Styles */
+/* Advanced Search Page */
+#g-img {
+    width: 310px;
+    height: 110px;
+    margin: auto;
+}
+
+.googletiny img {
+    width: 74px;
+    height: 24px;
+}
+
 .advanced_subheader {
     border-bottom: 1px solid #ebebeb;
 }
@@ -216,22 +224,21 @@ footer a:hover {
     font-weight: normal;
 }
 
-.input-one {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1140px;
-    min-width: 200px;
-    width: 96%;
-    margin: 40px 2% 0 45px;
-}
-
 .input-one .text-des-heading {
     font-size: 16px;
     min-width: 167px;
     width: 16%;
     font-weight: 500;
     color: #333333;
+}
+
+.input-one {
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    min-width: 200px;
+    width: 96%;
+    margin: 40px 2% 0 45px;
 }
 
 .input-one .text-des {
@@ -261,6 +268,13 @@ footer a:hover {
     padding-left: 30px;
 }
 
+span {
+    color: #666666;
+    font-family: monospace;
+    font-size: 11px;
+    white-space: pre;
+}
+
 .input-one .button {
     width: 50%;
     display: flex;
@@ -280,6 +294,13 @@ footer a:hover {
     font-weight: bold;
 }
 
+.tinygoogle img {
+    width: 74px;
+    height: 24px;
+    margin-right: 900px;
+    padding: 0;
+}
+
 .to-do-heading {
     margin-left: 13px;
     color: #777777;
@@ -287,87 +308,86 @@ footer a:hover {
     font-size: small;
 }
 
-.googletiny img, .tinygoogle img {
-    width: 74px;
-    height: 24px;
-}
-
-/* Media Queries for Responsive Design */
+/* Responsive Design - Only apply when needed */
 @media screen and (max-width: 768px) {
     /* Navigation for Mobile */
     nav {
-        padding: 10px;
+        justify-content: flex-end;
+        margin: 10px 15px;
     }
     
     /* Search Box for Mobile */
     .s-box {
-        width: 95%;
+        width: 90%;
+        max-width: 580px;
     }
     
     /* Search Buttons for Mobile */
     .s-btn {
-        margin: 10px 4px;
-        min-width: 120px;
+        margin: 15px 5px;
+        padding: 8px 12px;
     }
     
-    /* Footer for Mobile */
+    /* Footer Links for Mobile */
     .links {
         flex-direction: column;
     }
     
     .link-1, .link-2 {
-        width: 100%;
         text-align: center;
-        padding: 0;
+        padding: 5px 0;
     }
     
     /* Advanced Search for Mobile */
     .input-one {
         flex-direction: column;
         align-items: flex-start;
-        margin: 20px 10px;
+        margin: 20px 15px;
     }
     
     .input-one .text-des-heading,
     .input-one .text-des,
     .input-one .input-field,
-    .input-one .to-do,
+    .input-one .to-do {
+        width: 100%;
+        margin: 8px 0;
+    }
+    
     .input-one .button {
         width: 100%;
-        margin: 5px 0;
+        justify-content: center;
+    }
+    
+    .tinygoogle img {
+        margin-right: 0;
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    nav a {
-        font-size: 12px;
-        padding: 3px 4px;
+    /* Adjustments for smaller phones */
+    .s-box {
+        width: 85%;
     }
     
-    nav button {
-        padding: 5px 8px;
-        font-size: 12px;
+    /* Fix search icons positioning on very small screens */
+    .s-box .search-icon {
+        top: 10px;
     }
     
-    .s-box .s-input {
-        padding: 10px;
-        padding-left: 40px;
-        font-size: 14px;
+    .s-box .vs-icon {
+        top: 10px;
     }
     
+    /* Make buttons stack on very small screens if needed */
     .s-btn {
+        margin: 10px 3px;
         padding: 8px 10px;
-        font-size: 12px;
-        min-width: 110px;
+        font-size: 13px;
     }
     
-    .lang {
-        font-size: 12px;
-    }
-    
+    /* Smaller footer text for very small screens */
     footer a {
-        padding: 8px;
         font-size: 12px;
+        padding: 8px;
     }
 }
