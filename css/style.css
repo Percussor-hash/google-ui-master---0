@@ -11,7 +11,6 @@ body {
 	min-height: 100vh;
 }
 body {
-    height: 100vh; /* Makes sure it doesn't extend unnecessarily */
     overflow: hidden; /* Prevents scrolling if unnecessary */
 }
 nav {
