@@ -281,12 +281,14 @@ span{
     .section-1 { 
         margin-top: 20%;
     }
-    }
+
     nav {
-	width: fit-content;    
-   }
-body{
-	width: fit-content;
+        width: fit-content;    
+    }
+
+    body {
+        width: fit-content;
+    }
 }
-}
+
 
