@@ -284,6 +284,9 @@ span{
     }
     nav {
 	width: 200%;    
-   }	
+   }
+body{
+	width: fit-content;
+}
 }
 
