@@ -283,7 +283,7 @@ span{
     }
     }
     nav {
-	width: 200%;    
+	width: fit-content;    
    }
 body{
 	width: fit-content;
