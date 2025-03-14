@@ -279,7 +279,11 @@ span{
 
 @media only screen and (max-width: 767px) {
     .section-1 { 
-        margin-top: 70%;
+        margin-top: 50%;
     }
+    }
+    nav {
+	width: -webkit-fill-available;    
+   }	
 }
 
